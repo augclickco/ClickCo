@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "CLiCKCO",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "CLiCKCO - Logo Design & Web Development",
@@ -35,6 +35,36 @@ export const metadata: Metadata = {
     ],
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CLiCKCO | Logo Design & Web Development",
+    description: "CLiCKCO designs bold logos and high-performing websites that help brands stand out and convert.",
+    images: ["/images/og-image.png"],
+  },
+  icons: {
+    icon: "/images/favicon.png",
+    apple: "/images/favicon.png",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${syne.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </ThemeProvider>
+      </body>
+    </html>
+  );
+}    type: "website",
   },
   twitter: {
     card: "summary_large_image",

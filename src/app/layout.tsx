@@ -17,24 +17,54 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ClickCo | Logo Design & Web Development",
-  description: "ClickCo designs bold logos and high-performing websites that help brands stand out and convert.",
-  keywords: ["logo design", "web design", "web development", "brand identity", "ClickCo"],
+  title: "CLiCKCO | Logo Design & Web Development",
+  description: "CLiCKCO designs bold logos and high-performing websites that help brands stand out and convert.",
+  keywords: ["logo design", "web design", "web development", "brand identity", "CLiCKCO"],
   openGraph: {
-    title: "ClickCo | Logo Design & Web Development",
-    description: "ClickCo designs bold logos and high-performing websites that help brands stand out and convert.",
+    title: "CLiCKCO | Logo Design & Web Development",
+    description: "CLiCKCO designs bold logos and high-performing websites that help brands stand out and convert.",
     url: "https://clickco.vercel.app",
-    siteName: "ClickCo",
+    siteName: "CLiCKCO",
     images: [
       {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "ClickCo - Logo Design & Web Development",
+        alt: "CLiCKCO - Logo Design & Web Development",
       },
     ],
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CLiCKCO | Logo Design & Web Development",
+    description: "CLiCKCO designs bold logos and high-performing websites that help brands stand out and convert.",
+    images: ["/images/og-image.jpg"],
+  },
+  icons: {
+    icon: "/images/favicon.png",
+    apple: "/images/favicon.png",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${syne.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </ThemeProvider>
+      </body>
+    </html>
+  );
+}    type: "website",
   },
   twitter: {
     card: "summary_large_image",

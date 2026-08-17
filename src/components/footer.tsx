@@ -1,40 +1,4 @@
-import Link from "next/link";
-import { Phone, MessageCircle, Mail } from "lucide-react";
-
-export function Footer() {
-  return (
-    <footer className="border-t border-border py-12">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
-          <div>
-            <div className="text-lg font-bold">ClickCo</div>
-            <p className="mt-1 text-sm text-muted">
-              Logo Design & Web Development
-            </p>
-          </div>
-
-          <div className="flex flex-col gap-3 text-sm">
-            <a
-              href="tel:+918130614878"
-              className="flex items-center gap-2 text-muted hover:text-foreground transition"
-            >
-              <Phone size={15} />
-              +91 81306 14878
-            </a>
-            <a
-              href="https://wa.me/919211907631"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-muted hover:text-foreground transition"
-            >
-              <MessageCircle size={15} />
-              WhatsApp +91 92119 07631
-            </a>
-            <a
-              href="mailto:clickco@zohomail.in"
-              className="flex items-center gap-2 text-muted hover:text-foreground transition"
-            >
-              <Mail size={15} />
+src/components/footer.tsx              <Mail size={15} />
               clickco@zohomail.in
             </a>
           </div>
